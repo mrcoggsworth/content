@@ -226,8 +226,6 @@ script:
           required: true
           isArray: true
           defaultValue: ""
-          predefined:
-            - ""
         - name: Polling
           deprecated: true
           description: ""
@@ -448,8 +446,6 @@ script:
           required: true
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: environmentID
           description: 'Environment ID. Available environments ID: 300: "Linux (Ubuntu
             16.04, 64 bit)"", 200: "Android Static Analysis", 120: "Windows 7 64
@@ -570,37 +566,27 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: comment
           description: "Optional comment text that may be associated with the
             submission/sample (Note: you can use #tags here)"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: custom_cmd_line
           description: Optional commandline that should be passed to the analysis file
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: custom_run_time
           description: Optional runtime duration (in seconds)
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: submit_name
           description: Optional runtime duration (in seconds)
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: priority
           description: Optional priority value between 1 (lowest) and 10 (highest), by
             default all samples run with highest priority
@@ -625,16 +611,12 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: environment_variable
           description: "Optional system environment value. The value is provided in the
             format: name=value"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs:
         - contextPath: CrowdStrike.Submit.job_id
           description: 'The JobID of the file'
@@ -793,8 +775,6 @@ script:
           required: true
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: environmentID
           description: 'Environment ID. Available environments ID: 300: "Linux (Ubuntu
             16.04, 64 bit)"", 200: "Android Static Analysis", 120: "Windows 7 64
@@ -866,8 +846,10 @@ script:
           required: false
           isArray: false
           defaultValue: ""
+          auto: PREDEFINED
           predefined:
-            - ""
+            - "true"
+            - "false"
         - name: experimental_anti_evasion
           description: When set to 'true', will set all experimental anti-evasion options
             of the Kernelmode Monitor.
@@ -916,37 +898,27 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: comment
           description: "Optional comment text that may be associated with the
             submission/sample (Note: you can use #tags here)"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: custom_cmd_line
           description: Optional commandline that should be passed to the analysis file
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: custom_run_time
           description: Optional runtime duration (in seconds)
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: submit_name
           description: Optional runtime duration (in seconds)
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: priority
           description: Optional priority value between 1 (lowest) and 10 (highest), by
             default all samples run with highest priority
@@ -971,16 +943,12 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: environment_variable
           description: "Optional system environment value. The value is provided in the
             format: name=value"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs:
         - contextPath: CrowdStrike.Submit.job_id
           description: 'The JobID of the file'
@@ -1005,15 +973,11 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: filename
           description: Filename e.g. invoice.exe
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: filetype
           description: "Available options: 64bits, android, assembly, bat, cmd, com, csv,
             data, doc, docx, elf, empty, executable, flash, html, hwp, hwpx,
@@ -1024,22 +988,16 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: filetype_desc
           description: Filetype description e.g. PE32 executable
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: env_id
           description: Environment Id
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: country
           description: Country (3 digit ISO) e.g. swe
           required: false
@@ -1062,99 +1020,71 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: vx_family
           description: AV Family Substring e.g. nemucod
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: tag
           description: Hashtag e.g. ransomware
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: date_from
           description: "Date from in format: 'Y-m-d H:i' e.g. 2018-09-28 15:30"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: date_to
           description: "Date to in format: 'Y-m-d H:i' e.g. 2018-09-28 15:30"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: port
           description: Port e.g. 8080
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: host
           description: Host e.g. 192.168.0.1
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: domain
           description: Domain e.g. checkip.dyndns.org
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: url
           description: HTTP Request Substring e.g. google
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: similar_to
           description: Similar Samples e.g. <sha256>
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: context
           description: Sample Context e.g. <sha256>
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: imp_hash
           description: Import Hash
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: ssdeep
           description: SSDeep
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: authentihash
           description: Authentihash of the file
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs:
         - contextPath: File.SHA256
           description: SHA256 of the file
@@ -1230,15 +1160,11 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: filename
           description: Filename e.g. invoice.exe
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: filetype
           description: "Available options: 64bits, android, assembly, bat, cmd, com, csv,
             data, doc, docx, elf, empty, executable, flash, html, hwp, hwpx,
@@ -1249,22 +1175,16 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: filetype_desc
           description: Filetype description e.g. PE32 executable
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: env_id
           description: Environment Id
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: country
           description: Country (3 digit ISO) e.g. swe
           required: false
@@ -1287,99 +1207,71 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: vx_family
           description: AV Family Substring e.g. nemucod
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: tag
           description: Hashtag e.g. ransomware
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: date_from
           description: "Date from in format: 'Y-m-d H:i' e.g. 2018-09-28 15:30"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: date_to
           description: "Date to in format: 'Y-m-d H:i' e.g. 2018-09-28 15:30"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: port
           description: Port e.g. 8080
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: host
           description: Host e.g. 192.168.0.1
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: domain
           description: Domain e.g. checkip.dyndns.org
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: url
           description: HTTP Request Substring e.g. google
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: similar_to
           description: Similar Samples e.g. <sha256>
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: context
           description: Sample Context e.g. <sha256>
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: imp_hash
           description: Import hash
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: ssdeep
           description: SSdeep
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: authentihash
           description: Authentihash of the file
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs:
         - contextPath: File.SHA256
           description: SHA256 of the file
@@ -1463,8 +1355,6 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: hide_polling_output
           deprecated: true
           description: ""
@@ -1490,8 +1380,6 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: file-type
           description: Type of the file
           required: false
@@ -1682,8 +1570,6 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: hide_polling_output
           deprecated: true
           description: ""
@@ -1712,8 +1598,6 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: file-type
           description: Type of the file
           required: false
@@ -1895,8 +1779,6 @@ script:
           required: true
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: environmentID
           description: 'Environment ID. Available environments ID: 300: "Linux (Ubuntu
             16.04, 64 bit)"", 200: "Android Static Analysis", 120: "Windows 7 64
@@ -1965,8 +1847,10 @@ script:
           required: false
           isArray: false
           defaultValue: ""
+          auto: PREDEFINED
           predefined:
-            - ""
+            - "true"
+            - "false"
         - name: experimental_anti_evasion
           description: When set to 'true', will set all experimental anti-evasion options
             of the Kernelmode Monitor.
@@ -2015,37 +1899,27 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: comment
           description: "Optional comment text that may be associated with the
             submission/sample (Note: you can use #tags here)"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: custom_cmd_line
           description: Optional commandline that should be passed to the analysis file
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: custom_run_time
           description: Optional runtime duration (in seconds)
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: submit_name
           description: Optional runtime duration (in seconds)
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: priority
           description: Optional priority value between 1 (lowest) and 10 (highest), by
             default all samples run with highest priority
@@ -2070,16 +1944,12 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: environment_variable
           description: "Optional system environment value. The value is provided in the
             format: name=value"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs:
         - contextPath: CrowdStrike.Submit.job_id
           description: 'The JobID of the file'
@@ -2241,8 +2111,6 @@ script:
           required: true
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: environmentID
           description: 'Environment ID. Available environments ID: 300: "Linux (Ubuntu
             16.04, 64 bit)"", 200: "Android Static Analysis", 120: "Windows 7 64
@@ -2311,8 +2179,10 @@ script:
           required: false
           isArray: false
           defaultValue: ""
+          auto: PREDEFINED
           predefined:
-            - ""
+            - "true"
+            - "false"
         - name: experimental_anti_evasion
           description: When set to 'true', will set all experimental anti-evasion options
             of the Kernelmode Monitor.
@@ -2361,37 +2231,27 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: comment
           description: "Optional comment text that may be associated with the
             submission/sample (Note: you can use #tags here)"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: custom_cmd_line
           description: Optional commandline that should be passed to the analysis file
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: custom_run_time
           description: Optional runtime duration (in seconds)
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: submit_name
           description: Optional runtime duration (in seconds)
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: priority
           description: Optional priority value between 1 (lowest) and 10 (highest), by
             default all samples run with highest priority
@@ -2416,16 +2276,12 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: environment_variable
           description: "Optional system environment value. The value is provided in the
             format: name=value"
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs:
         - contextPath: CrowdStrike.Submit.job_id
           description: 'The JobID of the file'
@@ -2451,8 +2307,6 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: environmentID
           description: 'Environment ID. Available environments ID: 300: "Linux (Ubuntu
             16.04, 64 bit)"", 200: "Android Static Analysis", 120: "Windows 7 64
@@ -2473,8 +2327,6 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs:
         - contextPath: InfoFile.Name
           description: File name.
@@ -2503,8 +2355,6 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: environmentID
           description: 'Environment ID. Available environments ID: 300: "Linux (Ubuntu
             16.04, 64 bit)"", 200: "Android Static Analysis", 120: "Windows 7 64
@@ -2525,8 +2375,6 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs: []
     - name: cs-falcon-sandbox-analysis-overview
       description: get overview for hash
@@ -2537,8 +2385,6 @@ script:
           required: true
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs:
         - contextPath: CrowdStrike.AnalysisOverview.sha256
           description: SHA256 of the file
@@ -2639,8 +2485,6 @@ script:
           required: true
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs:
         - contextPath: CrowdStrike.AnalysisOverviewSummary.sha256
           description: 'The sha256 hash of the file'
@@ -2669,8 +2513,6 @@ script:
           required: true
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs: []
     - name: file
       description: Return file's information and reputation
@@ -2825,8 +2667,6 @@ script:
           required: true
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
       outputs:
         - contextPath: File.SHA1
           description: The SHA1 hash of the file.
@@ -2864,8 +2704,6 @@ script:
           required: false
           isArray: false
           defaultValue: ""
-          predefined:
-            - ""
         - name: environmentID
           description: 'Environment ID. Available environments ID: 300: "Linux (Ubuntu
             16.04, 64 bit)"", 200: "Android Static Analysis", 120: "Windows 7 64
@@ -2885,9 +2723,7 @@ script:
           description: The hash of the file
           required: false
           isArray: false
-          defaultValue: ""
-          predefined:
-            - ""
+          defaultValue: ""         
       outputs:
         - contextPath: CrowdStrike.State.state
           description: ''
