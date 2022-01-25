@@ -441,11 +441,12 @@ def crowdstrike_get_screenshots_command(client: Client, args: Dict[str, Any]) ->
 def crowdstrike_sample_download_command(client: Client, args: Dict[str, Any]) -> List:
     hash_value = args['file']
     response = client.download_sample(hash_value)
+    file_name = response.headers.get('Vx-Filename', hash_value + '.gz')
 
     command_results = CommandResults(
-        readable_output=f"Requested sample is available for download under the name {hash_value}.gz"
+        readable_output=f"Requested sample is available for download under the name {file_name}"
     )
-    return [command_results, fileResult(hash_value + '.gz', data=response.content, file_type=EntryType.FILE)]
+    return [command_results, fileResult(file_name, data=response.content, file_type=EntryType.FILE)]
 
 
 def main() -> None:
@@ -501,7 +502,7 @@ def main() -> None:
         elif demisto.command() in ['cs-falcon-sandbox-report-state']:
             command = crowdstrike_report_state_command
         else:
-            raise NotImplementedError(f'Command not implemented: {command}')
+            raise NotImplementedError(f'Command not implemented: {demisto.command()}')
 
         return_results(command(client, args))
 
