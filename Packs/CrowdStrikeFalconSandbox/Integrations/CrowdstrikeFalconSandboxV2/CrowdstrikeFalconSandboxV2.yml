@@ -70,7 +70,6 @@ script:
             - "true"
             - "false"
         - name: JobID
-          deprecated: true
           description: JobID to retrieve scan results for
           required: false
           isArray: false
@@ -82,19 +81,19 @@ script:
           isArray: false
       outputs:
         - contextPath: CrowdStrike.Report.job_id
-          description: ''
+          description: 'JobID of the report'
           type: String
         - contextPath: CrowdStrike.Report.environment_id
-          description: ''
+          description: 'EnvironmentID of the report'
           type: Number
         - contextPath: CrowdStrike.Report.environment_description
-          description: ''
+          description: 'Environment Description'
           type: String
         - contextPath: CrowdStrike.Report.size
-          description: ''
+          description: 'Size of the file'
           type: Number
         - contextPath: CrowdStrike.Report.type
-          description: ''
+          description: 'The type of the file'
           type: String
         - contextPath: CrowdStrike.Report.type_short
           description: ''
@@ -103,7 +102,7 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.state
-          description: ''
+          description: 'The state of the report'
           type: String
         - contextPath: CrowdStrike.Report.error_type
           description: ''
@@ -112,31 +111,31 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.submit_name
-          description: ''
+          description: 'The name of the file when submitted'
           type: String
         - contextPath: CrowdStrike.Report.md5
-          description: ''
+          description: 'The md5 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha1
-          description: ''
+          description: 'The sha1 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha512
-          description: ''
+          description: 'The sha512 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.ssdeep
-          description: ''
+          description: 'The ssdeep hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.imphash
-          description: ''
+          description: 'The imphash hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.av_detect
-          description: ''
+          description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Report.vx_family
-          description: ''
+        - contextPath: CrowdStrike.Reportimphash
+          description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
           description: ''
@@ -145,16 +144,16 @@ script:
           description: ''
           type: Date
         - contextPath: CrowdStrike.Report.threat_score
-          description: ''
+          description: 'Threat score of the file'
           type: Number
         - contextPath: CrowdStrike.Report.interesting
-          description: ''
+          description: 'If the file was found to be interesting'
           type: Boolean
         - contextPath: CrowdStrike.Report.threat_level
-          description: ''
+          description: 'Threat level of the file'
           type: Number
         - contextPath: CrowdStrike.Report.verdict
-          description: ''
+          description: 'The verdict for the file'
           type: String
         - contextPath: CrowdStrike.Report.total_network_connections
           description: ''
@@ -166,10 +165,10 @@ script:
           description: ''
           type: Number
         - contextPath: CrowdStrike.Report.file_metadata
-          description: ''
+          description: 'Metadata'
           type: Object
         - contextPath: CrowdStrike.Report.submissions.submission_id
-          description: ''
+          description: 'The submission id'
           type: String
         - contextPath: CrowdStrike.Report.submissions.filename
           description: ''
@@ -240,7 +239,6 @@ script:
             - "true"
             - "false"
         - name: JobID
-          deprecated: true
           description: JobID to retrieve scan results for
           required: false
           isArray: false
@@ -252,19 +250,19 @@ script:
           isArray: false
       outputs:
         - contextPath: CrowdStrike.Report.job_id
-          description: ''
+          description: 'The JobID of the file'
           type: String
         - contextPath: CrowdStrike.Report.environment_id
-          description: ''
+          description: 'The environment id of the report'
           type: Number
         - contextPath: CrowdStrike.Report.environment_description
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.size
-          description: ''
+          description: 'The size of the file'
           type: Number
         - contextPath: CrowdStrike.Report.type
-          description: ''
+          description: 'The type of the file'
           type: String
         - contextPath: CrowdStrike.Report.type_short
           description: ''
@@ -273,7 +271,7 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.state
-          description: ''
+          description: 'The state of the report'
           type: String
         - contextPath: CrowdStrike.Report.error_type
           description: ''
@@ -282,31 +280,31 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.submit_name
-          description: ''
+          description: 'The name of the file when submitted'
           type: String
         - contextPath: CrowdStrike.Report.md5
-          description: ''
+          description: 'The md5 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha1
-          description: ''
+          description: 'The sha1 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha512
-          description: ''
+          description: 'The sha512 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.ssdeep
-          description: ''
+          description: 'The ssdeep hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.imphash
-          description: ''
+          description: 'The imphash hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.av_detect
-          description: ''
+          description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Report.vx_family
-          description: ''
+        - contextPath: CrowdStrike.Reportimphash
+          description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
           description: ''
@@ -315,16 +313,16 @@ script:
           description: ''
           type: Date
         - contextPath: CrowdStrike.Report.threat_score
-          description: ''
+          description: 'Threat score of the file'
           type: Number
         - contextPath: CrowdStrike.Report.interesting
-          description: ''
+          description: 'If the file was found to be interesting'
           type: Boolean
         - contextPath: CrowdStrike.Report.threat_level
-          description: ''
+          description: 'Threat level of the file'
           type: Number
         - contextPath: CrowdStrike.Report.verdict
-          description: ''
+          description: 'The verdict for the file'
           type: String
         - contextPath: CrowdStrike.Report.total_network_connections
           description: ''
@@ -336,10 +334,10 @@ script:
           description: ''
           type: Number
         - contextPath: CrowdStrike.Report.file_metadata
-          description: ''
+          description: 'Metadata for the file'
           type: Object
         - contextPath: CrowdStrike.Report.submissions.submission_id
-          description: ''
+          description: 'The submission id'
           type: String
         - contextPath: CrowdStrike.Report.submissions.filename
           description: ''
@@ -639,31 +637,30 @@ script:
             - ""
       outputs:
         - contextPath: CrowdStrike.Submit.job_id
-          description: ''
+          description: 'The JobID of the file'
           type: String
         - contextPath: CrowdStrike.Submit.submission_id
-          description: ''
+          description: 'The submission id'
           type: String
-        - contextPath: CrowdStrike.Submit.environment_id
-          description: ''
+        - contextPath: CrowdStrike.SubmitThe environment id for the report
           type: Number
         - contextPath: CrowdStrike.Submit.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.job_id
-          description: ''
+          description: 'The JobID of the file'
           type: String
         - contextPath: CrowdStrike.Report.environment_id
-          description: ''
+          description: 'The environment id of the report'
           type: Number
         - contextPath: CrowdStrike.Report.environment_description
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.size
-          description: ''
+          description: 'The size of the file'
           type: Number
         - contextPath: CrowdStrike.Report.type
-          description: ''
+          description: 'The type of the file'
           type: String
         - contextPath: CrowdStrike.Report.type_short
           description: ''
@@ -672,7 +669,7 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.state
-          description: ''
+          description: 'The state of the report'
           type: String
         - contextPath: CrowdStrike.Report.error_type
           description: ''
@@ -681,31 +678,31 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.submit_name
-          description: ''
+          description: 'The name of the file when submitted'
           type: String
         - contextPath: CrowdStrike.Report.md5
-          description: ''
+          description: 'The md5 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha1
-          description: ''
+          description: 'The sha1 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha512
-          description: ''
+          description: 'The sha512 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.ssdeep
-          description: ''
+          description: 'The ssdeep hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.imphash
-          description: ''
+          description: 'The imphash hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.av_detect
-          description: ''
+          description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Report.vx_family
-          description: ''
+        - contextPath: CrowdStrike.Reportimphash
+          description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
           description: ''
@@ -714,16 +711,16 @@ script:
           description: ''
           type: Date
         - contextPath: CrowdStrike.Report.threat_score
-          description: ''
+          description: 'Threat score of the file'
           type: Number
         - contextPath: CrowdStrike.Report.interesting
-          description: ''
+          description: 'If the file was found to be interesting'
           type: Boolean
         - contextPath: CrowdStrike.Report.threat_level
-          description: ''
+          description: 'Threat level of the file'
           type: Number
         - contextPath: CrowdStrike.Report.verdict
-          description: ''
+          description: 'The verdict for the file'
           type: String
         - contextPath: CrowdStrike.Report.total_network_connections
           description: ''
@@ -735,10 +732,10 @@ script:
           description: ''
           type: Number
         - contextPath: CrowdStrike.Report.file_metadata
-          description: ''
+          description: 'Metadata for the file'
           type: Object
         - contextPath: CrowdStrike.Report.submissions.submission_id
-          description: ''
+          description: 'The submission id'
           type: String
         - contextPath: CrowdStrike.Report.submissions.filename
           description: ''
@@ -985,16 +982,15 @@ script:
             - ""
       outputs:
         - contextPath: CrowdStrike.Submit.job_id
-          description: ''
+          description: 'The JobID of the file'
           type: String
         - contextPath: CrowdStrike.Submit.submission_id
-          description: ''
+          description: 'The submission id'
           type: String
-        - contextPath: CrowdStrike.Submit.environment_id
-          description: ''
+        - contextPath: CrowdStrike.SubmitThe environment id for the submission
           type: Number
         - contextPath: CrowdStrike.Submit.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
     - name: cs-falcon-sandbox-search
       description: Search the database using the Falcon Sandbox search syntax
@@ -1513,19 +1509,19 @@ script:
             - ""
       outputs:
         - contextPath: CrowdStrike.Report.job_id
-          description: ''
+          description: 'The JobID of the file'
           type: String
         - contextPath: CrowdStrike.Report.environment_id
-          description: ''
+          description: 'The environment id of the report'
           type: Number
         - contextPath: CrowdStrike.Report.environment_description
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.size
-          description: ''
+          description: 'The size of the file'
           type: Number
         - contextPath: CrowdStrike.Report.type
-          description: ''
+          description: 'The type of the file'
           type: String
         - contextPath: CrowdStrike.Report.type_short
           description: ''
@@ -1534,7 +1530,7 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.state
-          description: ''
+          description: 'The state of the report'
           type: String
         - contextPath: CrowdStrike.Report.error_type
           description: ''
@@ -1543,31 +1539,31 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.submit_name
-          description: ''
+          description: 'The name of the file when submitted'
           type: String
         - contextPath: CrowdStrike.Report.md5
-          description: ''
+          description: 'The md5 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha1
-          description: ''
+          description: 'The sha1 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha512
-          description: ''
+          description: 'The sha512 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.ssdeep
-          description: ''
+          description: 'The ssdeep hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.imphash
-          description: ''
+          description: 'The imphash hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.av_detect
-          description: ''
+          description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Report.vx_family
-          description: ''
+        - contextPath: CrowdStrike.Reportimphash
+          description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
           description: ''
@@ -1576,16 +1572,16 @@ script:
           description: ''
           type: Date
         - contextPath: CrowdStrike.Report.threat_score
-          description: ''
+          description: 'Threat score of the file'
           type: Number
         - contextPath: CrowdStrike.Report.interesting
-          description: ''
+          description: 'If the file was found to be interesting'
           type: Boolean
         - contextPath: CrowdStrike.Report.threat_level
-          description: ''
+          description: 'Threat level of the file'
           type: Number
         - contextPath: CrowdStrike.Report.verdict
-          description: ''
+          description: 'The verdict for the file'
           type: String
         - contextPath: CrowdStrike.Report.total_network_connections
           description: ''
@@ -1597,10 +1593,10 @@ script:
           description: ''
           type: Number
         - contextPath: CrowdStrike.Report.file_metadata
-          description: ''
+          description: 'Metadata for the file'
           type: Object
         - contextPath: CrowdStrike.Report.submissions.submission_id
-          description: ''
+          description: 'The submission id'
           type: String
         - contextPath: CrowdStrike.Report.submissions.filename
           description: ''
@@ -1735,19 +1731,19 @@ script:
             - ""
       outputs:
         - contextPath: CrowdStrike.Report.job_id
-          description: ''
+          description: 'The JobID of the file'
           type: String
         - contextPath: CrowdStrike.Report.environment_id
-          description: ''
+          description: 'The environment id of the report'
           type: Number
         - contextPath: CrowdStrike.Report.environment_description
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.size
-          description: ''
+          description: 'The size of the file'
           type: Number
         - contextPath: CrowdStrike.Report.type
-          description: ''
+          description: 'The type of the file'
           type: String
         - contextPath: CrowdStrike.Report.type_short
           description: ''
@@ -1756,7 +1752,7 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.state
-          description: ''
+          description: 'The state of the report'
           type: String
         - contextPath: CrowdStrike.Report.error_type
           description: ''
@@ -1765,31 +1761,31 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.submit_name
-          description: ''
+          description: 'The name of the file when submitted'
           type: String
         - contextPath: CrowdStrike.Report.md5
-          description: ''
+          description: 'The md5 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha1
-          description: ''
+          description: 'The sha1 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha512
-          description: ''
+          description: 'The sha512 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.ssdeep
-          description: ''
+          description: 'The ssdeep hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.imphash
-          description: ''
+          description: 'The imphash hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.av_detect
-          description: ''
+          description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Report.vx_family
-          description: ''
+        - contextPath: CrowdStrike.Reportimphash
+          description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
           description: ''
@@ -1798,16 +1794,16 @@ script:
           description: ''
           type: Date
         - contextPath: CrowdStrike.Report.threat_score
-          description: ''
+          description: 'Threat score of the file'
           type: Number
         - contextPath: CrowdStrike.Report.interesting
-          description: ''
+          description: 'If the file was found to be interesting'
           type: Boolean
         - contextPath: CrowdStrike.Report.threat_level
-          description: ''
+          description: 'Threat level of the file'
           type: Number
         - contextPath: CrowdStrike.Report.verdict
-          description: ''
+          description: 'The verdict for the file'
           type: String
         - contextPath: CrowdStrike.Report.total_network_connections
           description: ''
@@ -1819,10 +1815,10 @@ script:
           description: ''
           type: Number
         - contextPath: CrowdStrike.Report.file_metadata
-          description: ''
+          description: 'Metadata for the file'
           type: Object
         - contextPath: CrowdStrike.Report.submissions.submission_id
-          description: ''
+          description: 'The submission id'
           type: String
         - contextPath: CrowdStrike.Report.submissions.filename
           description: ''
@@ -2084,34 +2080,33 @@ script:
             - ""
       outputs:
         - contextPath: CrowdStrike.Submit.job_id
-          description: ''
+          description: 'The JobID of the file'
           type: String
         - contextPath: CrowdStrike.Submit.submission_type
           description: ''
           type: String
         - contextPath: CrowdStrike.Submit.submission_id
-          description: ''
+          description: 'The submission id'
           type: String
-        - contextPath: CrowdStrike.Submit.environment_id
-          description: ''
+        - contextPath: CrowdStrike.SubmitThe environment id for the submission
           type: Number
         - contextPath: CrowdStrike.Submit.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.job_id
-          description: ''
+          description: 'The JobID of the file'
           type: String
         - contextPath: CrowdStrike.Report.environment_id
-          description: ''
+          description: 'The environment id of the report'
           type: Number
         - contextPath: CrowdStrike.Report.environment_description
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.size
-          description: ''
+          description: 'The size of the file'
           type: Number
         - contextPath: CrowdStrike.Report.type
-          description: ''
+          description: 'The type of the file'
           type: String
         - contextPath: CrowdStrike.Report.type_short
           description: ''
@@ -2120,7 +2115,7 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.state
-          description: ''
+          description: 'The state of the report'
           type: String
         - contextPath: CrowdStrike.Report.error_type
           description: ''
@@ -2129,31 +2124,31 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.submit_name
-          description: ''
+          description: 'The name of the file when submitted'
           type: String
         - contextPath: CrowdStrike.Report.md5
-          description: ''
+          description: 'The md5 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha1
-          description: ''
+          description: 'The sha1 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha512
-          description: ''
+          description: 'The sha512 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.ssdeep
-          description: ''
+          description: 'The ssdeep hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.imphash
-          description: ''
+          description: 'The imphash hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.av_detect
-          description: ''
+          description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Report.vx_family
-          description: ''
+        - contextPath: CrowdStrike.Reportimphash
+          description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
           description: ''
@@ -2162,16 +2157,16 @@ script:
           description: ''
           type: Date
         - contextPath: CrowdStrike.Report.threat_score
-          description: ''
+          description: 'Threat score of the file'
           type: Number
         - contextPath: CrowdStrike.Report.interesting
-          description: ''
+          description: 'If the file was found to be interesting'
           type: Boolean
         - contextPath: CrowdStrike.Report.threat_level
-          description: ''
+          description: 'Threat level of the file'
           type: Number
         - contextPath: CrowdStrike.Report.verdict
-          description: ''
+          description: 'The verdict for the file'
           type: String
         - contextPath: CrowdStrike.Report.total_network_connections
           description: ''
@@ -2183,10 +2178,10 @@ script:
           description: ''
           type: Number
         - contextPath: CrowdStrike.Report.file_metadata
-          description: ''
+          description: 'Metadata for the file'
           type: Object
         - contextPath: CrowdStrike.Report.submissions.submission_id
-          description: ''
+          description: 'The submission id'
           type: String
         - contextPath: CrowdStrike.Report.submissions.filename
           description: ''
@@ -2430,19 +2425,18 @@ script:
             - ""
       outputs:
         - contextPath: CrowdStrike.Submit.job_id
-          description: ''
+          description: 'The JobID of the file'
           type: String
         - contextPath: CrowdStrike.Submit.submission_type
           description: ''
           type: String
         - contextPath: CrowdStrike.Submit.submission_id
-          description: ''
+          description: 'The submission id'
           type: String
-        - contextPath: CrowdStrike.Submit.environment_id
-          description: ''
+        - contextPath: CrowdStrike.SubmitThe environment id for the submission
           type: Number
         - contextPath: CrowdStrike.Submit.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
     - name: cs-falcon-sandbox-get-screenshots
       description: "Retrieves screenshots from a report"
@@ -2645,13 +2639,13 @@ script:
             - ""
       outputs:
         - contextPath: CrowdStrike.AnalysisOverviewSummary.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
         - contextPath: CrowdStrike.AnalysisOverviewSummary.threat_score
-          description: ''
+          description: 'Threat score of the file'
           type: Number
         - contextPath: CrowdStrike.AnalysisOverviewSummary.verdict
-          description: ''
+          description: 'The verdict for the file'
           type: String
         - contextPath: CrowdStrike.AnalysisOverviewSummary.analysis_start_time
           description: ''
@@ -2684,19 +2678,19 @@ script:
           isArray: true
       outputs:
         - contextPath: CrowdStrike.Report.job_id
-          description: ''
+          description: 'The JobID of the file'
           type: String
         - contextPath: CrowdStrike.Report.environment_id
-          description: ''
+          description: 'The environment id of the report'
           type: Number
         - contextPath: CrowdStrike.Report.environment_description
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.size
-          description: ''
+          description: 'The size of the file'
           type: Number
         - contextPath: CrowdStrike.Report.type
-          description: ''
+          description: 'The type of the file'
           type: String
         - contextPath: CrowdStrike.Report.type_short
           description: ''
@@ -2705,7 +2699,7 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.state
-          description: ''
+          description: 'The state of the report'
           type: String
         - contextPath: CrowdStrike.Report.error_type
           description: ''
@@ -2714,31 +2708,31 @@ script:
           description: ''
           type: String
         - contextPath: CrowdStrike.Report.submit_name
-          description: ''
+          description: 'The name of the file when submitted'
           type: String
         - contextPath: CrowdStrike.Report.md5
-          description: ''
+          description: 'The md5 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha1
-          description: ''
+          description: 'The sha1 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha256
-          description: ''
+          description: 'The sha256 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.sha512
-          description: ''
+          description: 'The sha512 hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.ssdeep
-          description: ''
+          description: 'The ssdeep hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.imphash
-          description: ''
+          description: 'The imphash hash of the file'
           type: String
         - contextPath: CrowdStrike.Report.av_detect
-          description: ''
+          description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Report.vx_family
-          description: ''
+        - contextPath: CrowdStrike.Reportimphash
+          description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
           description: ''
@@ -2747,16 +2741,16 @@ script:
           description: ''
           type: Date
         - contextPath: CrowdStrike.Report.threat_score
-          description: ''
+          description: 'Threat score of the file'
           type: Number
         - contextPath: CrowdStrike.Report.interesting
-          description: ''
+          description: 'If the file was found to be interesting'
           type: Boolean
         - contextPath: CrowdStrike.Report.threat_level
-          description: ''
+          description: 'Threat level of the file'
           type: Number
         - contextPath: CrowdStrike.Report.verdict
-          description: ''
+          description: 'The verdict for the file'
           type: String
         - contextPath: CrowdStrike.Report.total_network_connections
           description: ''
@@ -2768,10 +2762,10 @@ script:
           description: ''
           type: Number
         - contextPath: CrowdStrike.Report.file_metadata
-          description: ''
+          description: 'Metadata for the file'
           type: Object
         - contextPath: CrowdStrike.Report.submissions.submission_id
-          description: ''
+          description: 'The submission id'
           type: String
         - contextPath: CrowdStrike.Report.submissions.filename
           description: ''
