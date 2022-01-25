@@ -642,7 +642,8 @@ script:
         - contextPath: CrowdStrike.Submit.submission_id
           description: 'The submission id'
           type: String
-        - contextPath: CrowdStrike.SubmitThe environment id for the report
+        - contextPath: CrowdStrike.Submit.environment_id
+          description: The environment id for the report
           type: Number
         - contextPath: CrowdStrike.Submit.sha256
           description: 'The sha256 hash of the file'
