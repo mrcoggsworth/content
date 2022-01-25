@@ -134,7 +134,7 @@ script:
         - contextPath: CrowdStrike.Report.av_detect
           description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Reportimphash
+        - contextPath: CrowdStrike.Report.vx_family
           description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
@@ -165,7 +165,7 @@ script:
           description: ''
           type: Number
         - contextPath: CrowdStrike.Report.file_metadata
-          description: 'Metadata'
+          description: 'Metadata of the file'
           type: Object
         - contextPath: CrowdStrike.Report.submissions.submission_id
           description: 'The submission id'
@@ -303,7 +303,7 @@ script:
         - contextPath: CrowdStrike.Report.av_detect
           description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Reportimphash
+        - contextPath: CrowdStrike.Report.vx_family
           description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
@@ -701,7 +701,7 @@ script:
         - contextPath: CrowdStrike.Report.av_detect
           description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Reportimphash
+        - contextPath: CrowdStrike.Report.vx_family
           description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
@@ -987,7 +987,8 @@ script:
         - contextPath: CrowdStrike.Submit.submission_id
           description: 'The submission id'
           type: String
-        - contextPath: CrowdStrike.SubmitThe environment id for the submission
+        - contextPath: CrowdStrike.Submit.environment_id
+          description: The environment id for the submission
           type: Number
         - contextPath: CrowdStrike.Submit.sha256
           description: 'The sha256 hash of the file'
@@ -1562,7 +1563,7 @@ script:
         - contextPath: CrowdStrike.Report.av_detect
           description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Reportimphash
+        - contextPath: CrowdStrike.Report.vx_family
           description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
@@ -1784,7 +1785,7 @@ script:
         - contextPath: CrowdStrike.Report.av_detect
           description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Reportimphash
+        - contextPath: CrowdStrike.Report.vx_family
           description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
@@ -2088,7 +2089,8 @@ script:
         - contextPath: CrowdStrike.Submit.submission_id
           description: 'The submission id'
           type: String
-        - contextPath: CrowdStrike.SubmitThe environment id for the submission
+        - contextPath: CrowdStrike.Submit.environment_id
+          description: The environment id for the submission
           type: Number
         - contextPath: CrowdStrike.Submit.sha256
           description: 'The sha256 hash of the file'
@@ -2147,7 +2149,7 @@ script:
         - contextPath: CrowdStrike.Report.av_detect
           description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Reportimphash
+        - contextPath: CrowdStrike.Report.vx_family
           description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
@@ -2433,7 +2435,8 @@ script:
         - contextPath: CrowdStrike.Submit.submission_id
           description: 'The submission id'
           type: String
-        - contextPath: CrowdStrike.SubmitThe environment id for the submission
+        - contextPath: CrowdStrike.Submit.environment_id
+          description: The environment id for the submission
           type: Number
         - contextPath: CrowdStrike.Submit.sha256
           description: 'The sha256 hash of the file'
@@ -2731,7 +2734,7 @@ script:
         - contextPath: CrowdStrike.Report.av_detect
           description: 'AV Multiscan range e.g. 50-70 (min 0, max 100)'
           type: Number
-        - contextPath: CrowdStrike.Reportimphash
+        - contextPath: CrowdStrike.Report.vx_family
           description: 'Malware family of the file'
           type: String
         - contextPath: CrowdStrike.Report.url_analysis
